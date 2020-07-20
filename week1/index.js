@@ -9,6 +9,7 @@ const app = http.createServer(function(request , response){
     let tempData = '';
     if(request.method == 'GET') {
         paramData = url.parse(_url , true).query;
+        console.log(paramData);
     } else if(request.method == 'POST') {
         request.on('data' , function(data){
             tempData += data.toString();
